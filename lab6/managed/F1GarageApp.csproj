@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+    <RootNamespace>Lab6</RootNamespace>
+  </PropertyGroup>
+
+  <!-- f1garage_dll.dll собирается из ../native (CMake) в ../bin и копируется рядом с exe -->
+  <ItemGroup>
+    <None Include="..\bin\f1garage_dll.dll" Condition="Exists('..\bin\f1garage_dll.dll')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>f1garage_dll.dll</Link>
+    </None>
+  </ItemGroup>
+
+</Project>

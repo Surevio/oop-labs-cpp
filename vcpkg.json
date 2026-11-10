@@ -1,0 +1,5 @@
+{
+  "name": "oop-labs",
+  "version-string": "1.0",
+  "dependencies": [ "boost-serialization" ]
+}

@@ -1,0 +1,9 @@
+build/
+out/
+.vs/
+bin/
+obj/
+lab6/bin/
+vcpkg_installed/
+*.user
+*.dat

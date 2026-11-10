@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "x64",
+      "displayName": "Visual Studio x64",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_PREFIX_PATH": "$env{QT_DIR}"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "debug", "configurePreset": "x64", "configuration": "Debug" },
+    { "name": "release", "configurePreset": "x64", "configuration": "Release" }
+  ]
+}
